@@ -1,0 +1,28 @@
+{
+  "name": "corona-api",
+  "version": "1.0.0",
+  "description": "corona-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BorisL91/corona-react-hooks.git"
+  },
+  "keywords": [
+    "react-hooks-corona-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BorisL91/corona-react-hooks/issues"
+  },
+  "homepage": "https://github.com/BorisL91/corona-react-hooks#readme",
+  "dependencies": {
+    "next": "^9.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "styled-components": "^5.0.1"
+  }
+}
