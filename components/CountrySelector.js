@@ -1,6 +1,6 @@
 import { useState } from "react"
 import useStats from "../utils/useStats"
-import Stats from "../components/Stats"
+import Stats from "./Stats"
 
 export default function CountrySelector() {
   const { stats: countries, loading, error } = useStats(
@@ -19,15 +19,17 @@ export default function CountrySelector() {
           setSelectedCountry(e.target.value)
         }}
       >
-        {Object.entries(countries.countries).map(([country, code], i) => (
-          <option
-            defaultValue={selectedCountry === countries.iso3[code]}
-            key={i}
-            value={countries.iso3[code]}
-          >
-            {country}
-          </option>
-        ))}
+        {Object.entries(countries.countries).map(([country, code], i) => {
+          return (
+            <option
+              defaultValue={selectedCountry === code.iso3}
+              key={i}
+              value={code.iso3}
+            >
+              {code.name}
+            </option>
+          )
+        })}
       </select>
       <Stats
         url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
